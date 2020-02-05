@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { RedditPostsService } from '../services/reddit-posts.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor(public router: Router, public redditPostsService: RedditPostsService) { }
 
-  constructor() {}
+  goToHome() {
+    this.router.navigateByUrl('home');
+  }
+
+  async refreshData() {
+    await this.redditPostsService.getRedditPost();
+  }
 
 }

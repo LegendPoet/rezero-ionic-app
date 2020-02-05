@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
+  <ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+      <ion-button (click)="refreshData()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title (click)="goToHome()">
+      Re:Zero
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content class="background">
+  <ion-router-outlet></ion-router-outlet>
 </ion-content>

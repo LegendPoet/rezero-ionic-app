@@ -1,0 +1,18 @@
+ion-content.background {
+    position: absolute;
+  --background: url("../../../assets/img/rezero.jpg") 0 0/100% 100% no-repeat;
+  width: 100vw;
+  height: 100vh;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  z-index: 0;
+}
+
+ion-content.viewer {
+    --background: transparent;
+    z-index: 100;
+}
+

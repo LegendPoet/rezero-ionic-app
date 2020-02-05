@@ -1,7 +1,9 @@
 {
   "name": "ionic-angular-app",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "id": " 0ab41f9a"
 }

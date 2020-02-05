@@ -1,0 +1,21 @@
+<ion-content class="background"></ion-content>
+<ion-content class="viewer">
+  <ion-card style="border: 1px solid rgb(238, 255, 0);">
+    <ion-card-header>
+      <ion-label color="dark" style="font-size: large; font-weight: bold;">
+        {{post?.title}}
+      </ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <ng-container *ngIf="post?.thumbnail.startsWith('https://')">
+        <ion-img [src]="preProccessImage(post.preview.images[0].source.url)"></ion-img>
+        <ion-button color="warning" expand="full" (click)="downloadImage(post.preview.images[0].source.url)">
+          Descargar Imagen
+        </ion-button>
+      </ng-container>
+      <ion-button color="warning" expand="full" (click)="toBack()">
+        Volver
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
